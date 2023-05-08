@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import MoviesPage from "./MoviesPage";
+import MoviesList from "./MovieList";
+import MovieShow from "./MovieShow";
 
 function App() {
   const [movies, setMovies] = useState({
@@ -20,6 +22,8 @@ function App() {
         <Route exact path="/">
           <div>Home</div>
         </Route>
+        <MovieShow/>
+        <MoviesList/>
       </Switch>
     </div>
   );
